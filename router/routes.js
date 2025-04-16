@@ -11,6 +11,8 @@ router.get("/products", async (req, res) => {
 });
 
 router.get("/products/:id", existor, async (req, res) => {
+  const { id } = req.params;
+  const product = req.product;
   success(res, 200, `${id}제품 출력`, product);
 });
 
